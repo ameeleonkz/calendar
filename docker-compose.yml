@@ -1,0 +1,16 @@
+services:
+  calendar-app:
+    build:
+      context: ./calendar
+    container_name: calendar-app
+    ports:
+      - "3000:80"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+    networks:
+      - calendar-network
+
+networks:
+  calendar-network:
+    driver: bridge

@@ -1,0 +1,57 @@
+.event-block {
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    border-radius: 4px;
+    border: 2px solid;
+    opacity: 0.9;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.2s;
+    overflow: hidden;
+    min-height: 30px;
+  }
+  
+  .event-block:hover {
+    opacity: 1;
+    transform: translateX(-2px);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+  }
+  
+  .event-block.conflict {
+    border-width: 3px;
+    border-style: dashed;
+    animation: conflict-pulse 2s infinite;
+  }
+  
+  @keyframes conflict-pulse {
+    0%, 100% { opacity: 0.9; }
+    50% { opacity: 0.7; }
+  }
+  
+  .event-content {
+    padding: 6px 8px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  .event-title {
+    font-weight: 600;
+    font-size: 13px;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    line-height: 1.2;
+    margin-bottom: 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .event-time {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    line-height: 1.1;
+  }
