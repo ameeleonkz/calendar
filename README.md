@@ -6,6 +6,10 @@
 
 `docker-compose up -d`
 
+
+https://github.com/user-attachments/assets/f41a3fe6-a079-442c-b13c-2bc36847e70e
+
+
 ## Функциональность
 
 ### Основные возможности
